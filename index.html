@@ -5,10 +5,18 @@
   <title>ADHETINSER</title>
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- scroll suave -->
   <style>
     html{
       scroll-behavior:smooth;
+    }
+
+    /* 👇 NUEVO SISTEMA DE PANTALLAS */
+    .page{
+      display:none;
+    }
+
+    .page.active{
+      display:block;
     }
   </style>
 
@@ -27,48 +35,25 @@
 
   <nav id="menu" class="menu">
     <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#consumibles">Consumibles</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#equipos">Equipos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#" onclick="showPage('inicio')">Inicio</a></li>
+      <li><a href="#" onclick="showPage('consumibles')">Consumibles</a></li>
+      <li><a href="#" onclick="showPage('servicios')">Servicios</a></li>
+      <li><a href="#" onclick="showPage('equipos')">Equipos</a></li>
+      <li><a href="#" onclick="showPage('contacto')">Contacto</a></li>
     </ul>
   </nav>
 
 </header>
 
-<!-- HERO -->
-<section id="inicio" class="hero">
+<!-- 🟢 INICIO -->
+<section id="inicio" class="hero page active">
   <h1>Consumibles y soporte técnico para mantener tu producción en marcha</h1>
   <p>La producción continua empieza con el suministro correcto</p>
   <button>WHATSAPP</button>
 </section>
 
-<!-- CATEGORÍAS -->
-<section class="categorias">
-
-  <div class="card">
-    <h3>Consumibles y Refacciones</h3>
-    <p>Tintas, solventes, cartuchos y más.</p>
-    <a href="#consumibles">Ver más</a>
-  </div>
-
-  <div class="card">
-    <h3>Servicios</h3>
-    <p>Mantenimiento, diagnóstico e instalación.</p>
-    <a href="#servicios">Ver más</a>
-  </div>
-
-  <div class="card">
-    <h3>Equipos</h3>
-    <p>CIJ, TIJ y TTO.</p>
-    <a href="#equipos">Ver más</a>
-  </div>
-
-</section>
-
-<!-- 🟡 PANTALLA CONSUMIBLES (SUBPÁGINA INTERNA) -->
-<section id="consumibles" class="pagina">
+<!-- 🟡 CONSUMIBLES -->
+<section id="consumibles" class="pagina page">
 
   <h2>Consumibles y Refacciones</h2>
   <p>Tintas, solventes, cartuchos y consumibles para equipos industriales.</p>
@@ -95,19 +80,19 @@
 </section>
 
 <!-- SERVICIOS -->
-<section id="servicios" class="pagina">
+<section id="servicios" class="pagina page">
   <h2>Servicios</h2>
   <p>Mantenimiento, diagnóstico e instalación de equipos de codificación.</p>
 </section>
 
 <!-- EQUIPOS -->
-<section id="equipos" class="pagina">
+<section id="equipos" class="pagina page">
   <h2>Equipos</h2>
   <p>CIJ, TIJ y TTO para impresión industrial.</p>
 </section>
 
-<!-- CONTACTO (COLOR DIFERENTE) -->
-<section id="contacto" class="contacto">
+<!-- CONTACTO -->
+<section id="contacto" class="contacto page">
   <h2>Contacto</h2>
   <p>Teléfono | Correo | WhatsApp</p>
 </section>
@@ -116,6 +101,19 @@
 <script>
 function toggleMenu(){
   document.getElementById("menu").classList.toggle("active");
+}
+
+function showPage(id){
+
+  // ocultar todas las páginas
+  const pages = document.querySelectorAll(".page");
+  pages.forEach(p => p.classList.remove("active"));
+
+  // mostrar la seleccionada
+  document.getElementById(id).classList.add("active");
+
+  // cerrar menú móvil
+  document.getElementById("menu").classList.remove("active");
 }
 </script>
 
