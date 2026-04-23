@@ -7,14 +7,41 @@
 </head>
 <body>
 
-  
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Consumibles y soporte técnico para mantener tu producción en marcha</h1>
-    <p>La producción continua empieza con el suministro correcto</p>
-    <button>WHATSAPP</button>
-  </section>
+<!-- HEADER / NAV -->
+<header class="header">
 
+  <!-- LOGO -->
+  <div class="logo">
+    <h1>ADHETINSER</h1>
+    <p>Tu mejor opción</p>
+  </div>
+
+  <!-- BOTÓN HAMBURGUESA -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    ☰
+  </div>
+
+  <!-- MENÚ -->
+  <nav id="menu" class="menu">
+    <ul>
+      <li>Inicio</li>
+      <li>Consumibles y Refacciones</li>
+      <li>Servicios</li>
+      <li>Equipos</li>
+      <li>Contacto</li>
+    </ul>
+  </nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Consumibles y soporte técnico para mantener tu producción en marcha</h1>
+  <p>La producción continua empieza con el suministro correcto</p>
+  <button>WHATSAPP</button>
+</section>
+
+<!-- CATEGORÍAS -->
 <section class="categorias">
 
   <div class="card">
@@ -36,11 +63,20 @@
   </div>
 
 </section>
-  <!-- CONTACTO -->
-  <section class="contacto">
-    <h2>Contacto</h2>
-    <p>Teléfono | Correo | WhatsApp</p>
-  </section>
+
+<!-- CONTACTO -->
+<section class="contacto">
+  <h2>Contacto</h2>
+  <p>Teléfono | Correo | WhatsApp</p>
+</section>
+
+<!-- JS -->
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
