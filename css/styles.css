@@ -1,1 +1,32 @@
+:root {
+  --primary: #D4AF37;
+  --dark: #0F172A;
+  --white: #FFFFFF;
+  --text: #111827;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: var(--text);
+}
+
+.hero {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+button {
+  background-color: var(--primary);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+section {
+  padding: 40px 20px;
+}
