@@ -3,30 +3,76 @@
   --dark: #0F172A;
   --white: #FFFFFF;
   --text: #111827;
+  --gray: #6B7280;
+  --light-bg: #F9FAFB;
 }
 
+/* Reset básico */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
   color: var(--text);
+  line-height: 1.5;
 }
 
+/* CONTENEDOR GENERAL */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HERO */
 .hero {
   background-color: var(--dark);
   color: var(--white);
-  padding: 60px 20px;
   text-align: center;
+  padding: 100px 20px;
 }
 
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #cbd5f5;
+}
+
+/* BOTONES */
 button {
   background-color: var(--primary);
   color: black;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   margin: 10px;
   cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
-section {
-  padding: 40px 20px;
+button:hover {
+  opacity: 0.85;
+}
+
+/* SECCIONES */
+.consumibles, .servicios, .contacto {
+  background-color: var(--white);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* TEXTO */
+p {
+  max-width: 600px;
+}
+
+/* CONTACTO */
+.contacto {
+  text-align: center;
 }
